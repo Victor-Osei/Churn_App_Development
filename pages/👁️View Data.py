@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import pyodbc # type: ignore
 
+#  create connection by inputting the credentials
 def create_connection():
     """Create a connection to the SQL Server"""
     try:
@@ -17,6 +18,7 @@ def create_connection():
         st.error(f"Error connecting to database: {e}")
         return None
 
+# load data from the server
 def load_data(connection, query):
     """Load data from SQL Server using the provided query"""
     try:
