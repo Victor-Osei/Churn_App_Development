@@ -19,6 +19,7 @@ def create_connection():
         return None
 
 # load data from the server
+
 def load_data(connection, query):
     """Load data from SQL Server using the provided query"""
     try:

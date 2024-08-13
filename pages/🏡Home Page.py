@@ -1,4 +1,6 @@
 import streamlit as st 
+import webbrowser 
+
 st.set_page_config(
     page_title="Home Page",
     page_icon="🏡",
@@ -29,6 +31,8 @@ st.markdown("""
 1. **View Data**: Access proprietary data
             
 2. **Dashboard**: Explore interactive visuals for insights
+            
+3. **Prediction Page**: Shows the result using the machine learning model of whether a customer churned or not
 """)
 
 
@@ -52,6 +56,19 @@ st.markdown("""
 
 
 # Contact and Github Repository
-st.subheader("Ask for Help")
-st.markdown("For collaboration contact Team Fiji")
-st.button("Repository on Github")
+st.subheader("Contact and GitHub Repository")
+st.markdown("For collaboration, contact Me")
+
+# Email contact
+st.markdown("📧 Email: victor.duah@azubiafrica.org")
+
+# GitHub repository
+github_repo = "https://github.com/Victor-Osei/Churn_App_Development"
+
+if st.button("View Repository on GitHub"):
+    webbrowser.open_new_tab(github_repo)
+
+# ... (rest of your code)
+# st.subheader("Ask for Help")
+# st.markdown("For collaboration contact Team Fiji")
+# st.button("Repository on Github")
