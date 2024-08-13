@@ -33,6 +33,8 @@ st.markdown("""
 2. **Dashboard**: Explore interactive visuals for insights
             
 3. **Prediction Page**: Shows the result using the machine learning model of whether a customer churned or not
+            
+4. **History Page**: 
 """)
 
 
@@ -41,8 +43,16 @@ st.subheader("How to run Churn App")
 st.code(""" 
         # activate virtual environment
         venv/Scripts/activate
-        streamlit run app.py
+        streamlit run app.py 
+
+        OR
+
+        # activate virtual environment
+        venv/Scripts/activate
+        python -m streamlit run app.py
+
         """, language= 'python')
+
 
 
 # Machine Learning Integration
@@ -57,10 +67,16 @@ st.markdown("""
 
 # Contact and Github Repository
 st.subheader("Contact and GitHub Repository")
-st.markdown("For collaboration, contact Me")
+st.markdown("For collaboration, contact Victor")
 
 # Email contact
 st.markdown("📧 Email: victor.duah@azubiafrica.org")
+
+# Linkedin
+linkedin = "https://www.linkedin.com/in/victor-osei-duah-a9182a13a/"
+
+if st.button("To Linkedin"):
+    webbrowser.open_new_tab(linkedin)
 
 # GitHub repository
 github_repo = "https://github.com/Victor-Osei/Churn_App_Development"
