@@ -5,10 +5,10 @@ def home():
     st.markdown("<h1 style='text-align: center; color: #2c3e50;'>Customer Churn Prediction App</h1>", unsafe_allow_html=True)
     
     # Add a subtitle
-    st.markdown("<h3 style='text-align: center; color: #f39c12;'>Designed by Victor Osei Duah</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: #2c3e50;'>Victor Osei Duah</h3>", unsafe_allow_html=True)
     
     # Add a nice visual (banner image or illustration)
-    st.image("C:/Users/DELL/OneDrive/App_Streamlit_Churn/Customer-churn-prediction.webp", use_column_width=True, caption="Predicting customer churn to retain valuable customers.")
+    st.image("C:/Users/DELL/OneDrive/Mine/Churn_App_Development/Reducing Customer Churn Rate.webp", use_column_width=True, caption="Predicting customer churn to retain valuable customers.")
 
     # Provide a brief introduction or description of the app
     st.write("""
