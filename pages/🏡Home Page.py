@@ -25,9 +25,16 @@ st.markdown("""
 
 # App features
 st.subheader("App Features")
-st.markdown("""
+st.markdown("""        
+1. **Home Page**: Basically gives information aboout the app and what it entails
             
-
+2. **View Data**: Access proprietary data
+            
+3. **Dashboard**: Explore interactive visuals for insights
+            
+4. **Prediction Page**: Shows the result using the machine learning model of whether a customer churned or not
+            
+5. **History Page**: 
 """)
 
 
