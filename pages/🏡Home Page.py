@@ -26,7 +26,7 @@ st.markdown("""
 # App features
 st.subheader("App Features")
 st.markdown("""        
-1. **Home Page**: Basically gives information aboout the app and what it entails
+1. **Home Page**: Basically gives information about the app and what it entails
             
 2. **View Data**: Access proprietary data
             
