@@ -117,7 +117,7 @@ def main():
         df = load_data(conn, query)
 
         if df is not None:
-            # Display data
+            # Display preview data
             st.subheader("Data Preview")
             st.write(df.head())
 
