@@ -2,7 +2,7 @@ import streamlit as st
 
 def home():
     # Set the title with a larger font and center alignment
-    st.markdown("<h1 style='text-align: center; color: #9b59b6;'>Customer Churn Prediction App</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: #2c3e50;'>Customer Churn Prediction App</h1>", unsafe_allow_html=True)
     
     # Add a subtitle
     st.markdown("<h3 style='text-align: center; color: #f39c12;'>Designed by Victor Osei Duah</h3>", unsafe_allow_html=True)
