@@ -5,6 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sklearn 
 import lightgbm as lgb
+
 # Set page configuration
 st.set_page_config(
     page_title="Predictive Analytics Dashboard",
