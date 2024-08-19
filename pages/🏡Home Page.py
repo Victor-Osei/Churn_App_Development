@@ -9,32 +9,24 @@ st.set_page_config(
 # Main Content
 st.title("Customer Churn Prediction")
 st.markdown("""
-            This app uses machine learning model to predict whether a customer will churn or not
+            This application leverages machine learning models to predict customer churn. It helps businesses identify potential churn risks and take proactive measures to retain valuable customers.
             """)
 
 
 # Key Features
 st.subheader("Key Features")
 st.markdown("""
-- Read data from SQL Server
-- Select the features for classification
-- This app also provide a comprehensive report on the performance of the model
-- The app provides interactive charts for feature importance and churn probability
+- **Data Integration**: Connect to SQL Server to fetch and analyze customer data.
+- **Feature Selection**: Choose relevant features for classification.
+- **Model Performance Report**: Access a detailed report on model performance.
+- **Interactive Charts**: Visualize feature importance and churn probabilities with interactive charts.
 """)
 
 
 # App features
 st.subheader("App Features")
 st.markdown("""        
-1. **Home Page**: Basically gives information about the app and what it entails
-            
-2. **View Data**: Access proprietary data
-            
-3. **Dashboard**: Explore interactive visuals for insights
-            
-4. **Prediction Page**: Shows the result using the machine learning model of whether a customer churned or not
-            
-5. **History Page**: 
+
 """)
 
 
