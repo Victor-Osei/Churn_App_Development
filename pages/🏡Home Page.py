@@ -26,7 +26,11 @@ st.markdown("""
 # App features
 st.subheader("App Features")
 st.markdown("""        
-
+1. **Home Page**: Overview of the application's purpose and functionality.
+2. **View Data**: Explore the dataset and understand the customer attributes.
+3. **Dashboard**: Visualize key metrics and insights from the data.
+4. **Prediction Page**: Make individual predictions on customer churn.
+5. **History Page**: Review past predictions and their outcomes.
 """)
 
 
@@ -50,10 +54,10 @@ st.code("""
 # Machine Learning Integration
 st.subheader("Machine Learning Integration")
 st.markdown("""
-3. **Model Selection**: Choice of machine learning model
-   **Prediction**: Individual customer prediction
-   **Seamless Integration**: Integrate predictions into your workflow
-   **Insights and Visualization**: Interactive charts and graphs 
+- **Model Selection**: Choose from various machine learning models for prediction.
+- **Prediction**: Generate predictions for individual customers based on their data.
+- **Seamless Integration**: Easily incorporate predictions into your business workflow.
+- **Insights and Visualization**: Gain valuable insights through interactive charts and graphs.
 """)
 
 
