@@ -4,8 +4,8 @@ import joblib
 import pandas as pd
 import matplotlib.pyplot as plt
 import sklearn 
-import lightgbm as lgb
-from datetime import datetime 
+import lightgbm as lgb 
+from datetime import datetime
 
 # Set page configuration
 st.set_page_config(
@@ -15,7 +15,8 @@ st.set_page_config(
 )
 
 # Custom header with a subheader
-st.title("🔮 Predictive Analytics Dashboard")
+page_title = "🔮 Predictive Analytics Dashboard"
+st.title(page_title)
 st.subheader("Empowering your decisions with data-driven insights")
 
 # Loading the model and preprocessing tools
@@ -47,7 +48,11 @@ def predict(attributes, model_name='random_forest'):
     prob = models[model_name].predict_proba(processed_df)
     return pred[0], np.max(prob)
 
-# User interface: Collect user input in a form
+# Initialize session state to store history if it doesn't exist
+if 'history' not in st.session_state:
+    st.session_state.history = pd.DataFrame(columns=['Date', 'Time', 'Prediction', 'Probability'])
+
+# Check if the page is for predictions
 st.markdown("### Enter Customer Details to Predict Churn")
 with st.form(key='user_input_form'):
     gender = st.selectbox('Gender', ['Male', 'Female'])
@@ -91,6 +96,7 @@ if submit_button:
     }
 
     prediction, probability = predict(user_input, model_choice)
+    prediction_text = 'Churn' if prediction == 1 else 'No Churn'
     
     st.markdown(f"### Prediction: {'Churn' if prediction == 1 else 'No Churn'}")
     st.markdown(f"**Probability:** {probability:.2f}")
@@ -102,5 +108,18 @@ if submit_button:
     st.pyplot(fig)
 
     # Explanation or interpretation section
+    interpretation = f"The model predicts that the customer is {'likely' if prediction == 1 else 'not likely'} to churn with a confidence level of {probability:.2%}."
     st.markdown("#### Interpretation")
-    st.write(f"The model predicts that the customer is {'likely' if prediction == 1 else 'not likely'} to churn with a confidence level of {probability:.2%}.")
+    st.write(interpretation)
+
+    # Store the predicted data in history with date and time
+    current_time = datetime.now()
+    new_record = pd.DataFrame({
+        'Date': [current_time.strftime('%Y-%m-%d')],
+        'Time': [current_time.strftime('%H:%M:%S')],
+        'Prediction': [prediction_text],
+        'Model': [model_choice],
+        'Probability': [probability],
+        'Interpretation': [interpretation],
+    })
+    st.session_state.history = pd.concat([st.session_state.history, new_record], ignore_index=True)
